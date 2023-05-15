@@ -30,5 +30,16 @@ pipeline {
 				echo "Deploy"
 			}
 		}
+	} 
+	post {
+		always {
+			echo "I run always"
+		}
+		success {
+			echo "I run when build is successful"
+		}
+		fail {
+			echo "I run when build fails"
+		}
 	}
 }
