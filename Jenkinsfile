@@ -69,7 +69,7 @@ pipeline {
 			steps {
 				script {
 					docker.withRegistry('','dockerhub') {
-					dockerImage.push();
+					dockerImage.tag('fahadhabib911/currency-exchange-devops');
 					dockerImage.push('latest');
 					}
 				}
