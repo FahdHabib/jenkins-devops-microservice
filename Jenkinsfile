@@ -60,7 +60,7 @@ pipeline {
 			steps {
 				//"docker build -t in28min/currecy-exchange-devops:$env.BUILD_TAG"
 				script {
-					dockerImage = docker.build("in28min/currency-exchange-devops:${env.BUILD_TAG}")
+					dockerImage = docker.build("fahadhabib911/currency-exchange-devops:${env.BUILD_TAG}")
 				}
 			}
 		}
@@ -69,7 +69,7 @@ pipeline {
 			steps {
 				script {
 					docker.withRegistry('','dockerhub') {
-					dockerImage.tag('fahadhabib911/currency-exchange-devops:0.0.1.RELEASE');
+					dockerImage.push();
 					dockerImage.push('latest');
 					}
 				}
