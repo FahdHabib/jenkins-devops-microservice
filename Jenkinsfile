@@ -33,13 +33,13 @@ pipeline {
 	} 
 	post {
 		always {
-			echo "I run always"
+			echo "I run always."
 		}
 		success {
-			echo "I run when build is successful"
+			echo "I run when build is successful."
 		}
 		fail {
-			echo "I run when build fails"
+			echo "I run when build fails."
 		}
 	}
 }
